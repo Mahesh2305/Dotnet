@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">My Shopping Cart</h1>
+   @{
+    List<int> items=ViewData["cart"] as List<int>;
+    foreach(int id in  items)
+    {
+        <p> @id  | <a href="/shoppingcart/removefromcart/@id">Remove from cart</a></p>
+    }
+   }
+</div>
